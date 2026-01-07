@@ -142,8 +142,6 @@ export function getFileExtension(filename: string): string {
     return filename.split('.').pop()?.toLowerCase() || '';
 }
 
-export function generateFilename(prefix: string, extension: string = 'png'): string {
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
-    return `${prefix}-${timestamp}.${extension}`;
-}
+
+
 
