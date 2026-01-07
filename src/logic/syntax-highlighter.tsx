@@ -156,7 +156,7 @@ export const HighlightedCode: React.FC<HighlightedCodeProps> = ({ code, theme = 
     const tokens = tokenize(code);
 
     return (
-        <>
+        <React.Fragment>
             {tokens.map((token, index) => {
                 const className = `token-${token.type}`;
                 return (
@@ -165,6 +165,6 @@ export const HighlightedCode: React.FC<HighlightedCodeProps> = ({ code, theme = 
                     </span>
                 );
             })}
-        </>
+        </React.Fragment>
     );
 };
